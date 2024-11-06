@@ -1,0 +1,33 @@
+.btn {
+  display: inline-block;
+  font-family: $robotoRegular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px; 
+  text-transform: uppercase;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #FD6F00;
+  padding: 5px 20px;
+  color: $white;
+  border-radius: 6px;
+  transition: all ease .3s;
+  border: none;
+  cursor: pointer;
+  // box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+  
+  &:hover,
+  &:active {
+    background: darken(#FD6F00, 10%);
+    color: $white;
+    transform: scale(0.96);
+  }
+  &:focus {
+    background: darken(#FD6F00, 15%);
+    color: $white;
+  }
+}
+
+
+

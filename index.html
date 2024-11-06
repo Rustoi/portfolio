@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo">
+          <a href="#">
+            <img src="./img/logo2.png" width="80px" height="80px" alt="Logo">
+          </a>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">Главная</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Обо мне</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Навыки</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Портфолио</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__btn btn">Резюме CV</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="particles-js" class="main">
+    <div class="main__content">
+      <section class="intro">
+        <div class="container">
+          <div class="intro__content">
+            <div class="intro__desc">
+              <p class="intro__subtitle">Привет меня зовут</p>
+              <h1 class="intro__name">Rustoi</h1>
+              <h3 class="intro__title">Я Front-end разработчик</h3>
+              <p class="intro__text">Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Error deserunt porro, placeat
+                dolorum explicabo dicta sequi ducimus sit autem blanditiis quos illum
+                tempora soluta suscipit perspiciatis labore optio velit odio.</p>
+
+              <a href="#" class="intro__btn btn">Связаться</a>
+              <ul class="intro__social">
+                <li class="animate__rollIn"><a href="#" class="intro__social-link"><i
+                      class="fa-brands fa-instagram"></i></a></li>
+                <li class="animate__hinge"><a href="#" class="intro__social-link"><i
+                      class="fa-brands fa-telegram"></i></a></li>
+                <li class="animate__hinge"><a href="#" class="intro__social-link"><i
+                      class="fa-brands fa-facebook"></i></a></li>
+                <li class="animate__hinge"><a href="#" class="intro__social-link"><i
+                      class="fa-brands fa-github"></i></a></li>
+              </ul>
+            </div>
+            <div class="info">
+              <div class="info__content">
+                <div class="info__image jump">
+                  <div class="jelly-animation"></div>
+                  <img src="./img/man.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about__content">
+            <div class="about__image jump">
+              <img src="./img/boy1.png" alt="">
+            </div>
+            <div class="about__desc">
+              <h2 class="about__title">Обо мне</h2>
+              <p class="about__text">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Ut eaque totam, vel quos reprehenderit dolorem,
+                dolor in expedita alias consectetur asperiores error
+                molestias animi eos id saepe iste nobis accusamus.
+              </p>
+
+              <div class="about__info">
+                <label for=""> HTML </label>
+                <input value="90" type="range" name="range" min="0" max="100">
+                <label for="">CSS</label>
+                <input value="60" type="range" name="range" min="0" max="100">
+                <label for="">JavaScript</label>
+                <input value="68" type="range" name="range" min="0" max="100">
+                <label for="">REACT</label>
+                <input value="70" type="range" name="range" min="0" max="100">
+              </div>
+            </div>
+          </div>
+
+      </section>
+      <section class="skills">
+        <div class="container">
+          <h2 class="skills__title">Навыки</h2>
+          <div class="skills__content">
+            <div class="skills__desc">
+              <p class="skills__text">Являюсь начинающим фронтенд-разработчиком с опытом создания статических
+                веб-страниц.
+              </p>
+              <p class="skills__text">Уверенно владею <span class="skills__text-span">HTML, CSS и
+                  основами JavaScript</span>.</span></p>
+              <p class="skills__text">
+                Активно изучаю <span class="skills__text-span">React</span> и стремлюсь углубить свои знания в области
+                веб-разработки.
+              </p>
+
+            </div>
+
+
+            <div class="slider__container">
+              <div class="faders">
+                <div class="left"></div>
+                <div class="right"></div>
+              </div>
+
+              <div class="items">
+                <div class="entry">
+                  <p class="name">HTML 5</p>
+                  <img src="./img/html-5.svg" alt="Smiling chick">
+                  <p class="quote">"HTML — это язык разметки, используемый для создания структуры веб-страниц,
+                    позволяющий организовать текст, изображения и
+                    другие элементы контента."</p>
+                </div>
+                <div class="entry">
+                  <p class="name">CSS 3</p>
+                  <img src="./img/css3.svg" alt="Smiling chick">
+                  <p class="quote">"CSS — это язык стилей для оформления веб-страниц, позволяющий задавать цвета, шрифты
+                    и размеры, улучшая визуальное
+                    восприятие и адаптацию интерфейсов."</p>
+                </div>
+                <div class="entry">
+                  <p class="name">JavaScript</p>
+                  <img src="./img/javascript.svg" alt="Smiling chick">
+                  <p class="quote">"JavaScript — это язык программирования для добавления интерактивности и
+                    динамического контента на веб-страницы,
+                    расширяющий возможности HTML и CSS."</p>
+                </div>
+                <div class="entry">
+                  <p class="name">React</p>
+                  <img src="./img/react.svg" alt="Smiling chick">
+                  <p class="quote">"React — это библиотека JavaScript для создания динамичных пользовательских
+                    интерфейсов с использованием компонентов,
+                    упрощая разработку веб-приложений."</p>
+                </div>
+                <div class="entry">
+                  <p class="name">SaSS/SCSS</p>
+                  <img src="./img/icons8-sass.svg" alt="Smiling chick">
+                  <p class="quote">"Sass/SCSS — это препроцессор CSS, который добавляет функции, такие как переменные и
+                    вложенность, улучшая структуру и
+                    управление стилями."</p>
+                </div>
+                <div class="entry">
+                  <p class="name">Figma</p>
+                  <img src="./img/figma.svg" alt="Smiling chick">
+                  <p class="quote">"Figma — это инструмент для дизайна интерфейсов и прототипирования, позволяющий
+                    командам совместно создавать и
+                    редактировать графику."</p>
+                </div>
+                <div class="entry">
+                  <p class="name">Photoshop</p>
+                  <img src="./img/photoshop.svg" alt="Smiling chick">
+                  <p class="quote">"Photoshop — это мощный графический редактор для обработки изображений и создания
+                    визуального контента, широко
+                    используемый в дизайне и веб-разработке."</p>
+                </div>
+                <div class="entry">
+                  <p class="name">Redux</p>
+                  <img src="./img/redux.svg" alt="Smiling chick">
+                  <p class="quote">"Redux — это библиотека управления состоянием для JavaScript-приложений,
+                    обеспечивающая предсказуемое и централизованное
+                    управление состоянием компонентов."</p>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- <div class="swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">Slide 1
+                  <img src="./img/" alt="">
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+              </div>
+
+              <div class="swiper-pagination"></div>
+            
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            
+              <div class="swiper-scrollbar"></div>
+            </div> -->
+          </div>
+        </div>
+
+
+      </section>
+
+      <section class="portfolio">
+        <div class="container">
+          <h2 class="portfolio__title">Портфолио</h2>
+          <div class="portfolio__container">
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/boosted.jpg" alt="Проект 1" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Boosted</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML, CSS, SCSS JavaScript.</p>
+                <a href="https://github.com/Rustoi/letsgo" target="_blank" class="portfolio__button">Посмотреть код</a>
+                <a href="https://rustoi.github.io/letsgo/" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/coffestyle.jpg" alt="Проект 2" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Coffestyle</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/drafts.jpg" alt="Проект 3" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Drafts</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML, CSS и JavaScript.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/pure.jpg" alt="Проект 4" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Pure</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/travel.jpg" alt="Проект 5" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Travel</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/nike.jpg" alt="Проект 6" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Nike</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/test.jpg" alt="Проект 7" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Spraw.uz</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/ioga.jpg" alt="Проект 8" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Ioga</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+            <article class="portfolio__item">
+              <div class="portfolio__image">
+                <img src="./img/portfolio/stone.jpg" alt="Проект 9" />
+              </div>
+              <div class="portfolio__info">
+                <h3 class="portfolio__project-title">Stone</h3>
+                <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
+                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                  код</a>
+                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+              </div>
+            </article>
+            <!-- Добавьте другие проекты по аналогии -->
+          </div>
+
+
+
+      </section>
+
+
+      <section class="contacts" id="contacts">
+        <h2 class="contacts__title">Свяжитесь со мной</h2>
+        <div class="container">
+          <div class="contacts__container">
+            <form class="contacts__form">
+              <div class="contacts__form-group">
+                <label for="name" class="contacts__label">Имя</label>
+                <input type="text" id="name" class="contacts__input" placeholder="Ваше имя" required />
+              </div>
+              <div class="contacts__form-group">
+                <label for="email" class="contacts__label">Email</label>
+                <input type="email" id="email" class="contacts__input" placeholder="Ваш email" required />
+              </div>
+              <div class="contacts__form-group">
+                <label for="message" class="contacts__label">Сообщение</label>
+                <textarea id="message" class="contacts__input contacts__textarea" placeholder="Ваше сообщение"
+                  required></textarea>
+              </div>
+              <button type="submit" class="contacts__button">Отправить</button>
+            </form>
+
+            <div class="contacts__socials">
+              <p class="contacts__text">Или найдите меня в социальных сетях:</p>
+            <ul class="intro__social">
+              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-telegram"></i></a></li>
+              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+
+
+  <script src="./js/particles.min.js"></script>
+
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/"
+        }
+      }
+  </script>
+  <script type="module" src="./js/three.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

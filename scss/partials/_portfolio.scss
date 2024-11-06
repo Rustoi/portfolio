@@ -1,0 +1,115 @@
+/* Основные стили для блока портфолио */
+.portfolio {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.portfolio__title {
+  font-size: 2.5rem;
+  color: $white;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+/* Контейнер для карточек */
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  place-content: center;
+}
+
+/* Карточка проекта */
+.portfolio__item {
+  background-color: #ffffffe7;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.297);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 360px;
+  text-align: left;
+  padding: 10px;
+}
+/* Изображение проекта */
+.portfolio__image {
+  width: 100%;
+  overflow: hidden;
+}
+.portfolio__image img {
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+  height: 300px;
+  object-position: top;
+  transition: transform 0.4s;
+
+}
+.portfolio__image img:hover {
+  transform: scale(1.1);
+}
+
+/* Информация о проекте */
+.portfolio__info {
+  padding: 12px;
+  color: $black;
+	background: #efeeee;
+  -webkit-box-shadow: -1px -9px 17px -5px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -1px -9px 17px -5px rgba(34, 60, 80, 0.2);
+  box-shadow: -1px -9px 17px -5px rgba(34, 60, 80, 0.2);
+      
+}
+
+.portfolio__project-title {
+  font-size: 22px;
+  font-family: $robotoMedium;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+  color: $button;
+}
+
+.portfolio__description {
+  font-size: 16px;
+  font-family: $robotoRegular;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: $black;
+  
+}
+
+/* Кнопки */
+.portfolio__button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: $button;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.portfolio__button:hover {
+  background-color: darken($color: $button, $amount: 12px);
+  box-shadow: 0 4px 12px rgba(0, 91, 187, 0.3);
+  color: $white;
+}
+
+.portfolio__button:active {
+  background-color: #f27b27;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .portfolio__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio__item {
+    width: 100%;
+    max-width: 100%;
+  }
+}

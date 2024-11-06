@@ -1,0 +1,36 @@
+.skills{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.skills__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills__title{
+  font-family: $robotoBold;
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.skills__desc{
+  padding-bottom: 30px;
+}
+.skills__text {
+  font-family: $robotoRegular;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: center;
+  color: $white;
+  margin-bottom: 6px;
+}
+.skills__text-span{
+  font-family: $robotoBold;
+  color: $button;
+  font-size: 26px;
+  font-weight: 700;
+}

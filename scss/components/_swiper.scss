@@ -1,0 +1,106 @@
+
+// --------------------------
+.slider__container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2); 
+  
+  .items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 20s infinite alternate linear;
+
+    .entry {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      width: 300px;
+      background: rgba(83, 83, 83, 0.137);
+      margin: 1em;
+      padding: 0.5em;
+      border-radius: 10px;
+      box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05);
+      transition: background 0.2s ease;
+      &:hover {
+          background-color: rgba(0, 0, 0, 0.531); 
+          box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); 
+          backdrop-filter: blur(12px); 
+      }
+
+      img {
+        width: 96px;
+        height: 96px;
+        object-fit: cover;
+      }
+
+      p {
+        text-align: center;
+        padding: 1em;
+      }
+
+      p.name {
+        font-weight: bold;
+      }
+
+      @keyframes carouselAnim {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(calc(-100% + (5 * 300px)));
+        }
+      }
+    }
+  }
+  .quote {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .items {
+      animation: carouselAnim 30s infinite alternate linear;
+    }
+
+    @keyframes carouselAnim {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(calc(-100% + (2 * 300px)));
+      }
+    }
+  }
+
+  .faders {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+
+    .left,
+    .right {
+      background: linear-gradient(
+        to right,
+        rgba(247, 144, 80, 0.139) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      width: 20%;
+      height: 100%;
+      position: absolute;
+      z-index: 200;
+    }
+
+    .right {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        rgba(247, 144, 80, 0.113) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+}

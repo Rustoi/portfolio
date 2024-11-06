@@ -1,0 +1,95 @@
+/* Стили для секции контактов */
+.contacts {
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.contacts__title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: $white;
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.contacts__form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(243, 242, 242, 0.139);
+}
+
+.contacts__form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contacts__label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.contacts__input, .contacts__textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+}
+
+.contacts__textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.contacts__input:focus, .contacts__textarea:focus {
+  outline: none;
+  border-color: $button;
+}
+
+.contacts__button {
+  width: 100%;
+  padding: 12px;
+  background-color: $button;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contacts__button:hover {
+  background-color: darken($button, 10%);
+}
+
+/* Стили для соцсетей */
+.contacts__socials {
+  text-align: center;
+}
+
+.contacts__text {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: $white;
+}
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .contacts__container {
+    flex-direction: column;
+  }
+}
+
+
