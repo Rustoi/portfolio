@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -14,69 +14,84 @@
 </head>
 
 <body class="body">
+  <div class="background">
+    <canvas id="world"></canvas>
+  </div>
   <header class="header">
     <div class="container">
       <div class="header__content">
         <div class="header__logo">
-          <a href="#">
+          <a href="#intro">
             <img src="./img/logo2.png" width="80px" height="80px" alt="Logo">
           </a>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__nav" id="menu">
           <ul class="header__list">
             <li class="header__item">
-              <a href="#" class="header__link">Главная</a>
+              <a href="#intro" class="header__link">Главная</a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link">Обо мне</a>
+              <a href="#about" class="header__link">Обо мне</a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link">Навыки</a>
+              <a href="#skills" class="header__link">Навыки</a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link">Портфолио</a>
+              <a href="#portfolio" class="header__link">Портфолио</a>
             </li>
             <li class="header__item">
-              <a href="#" class="header__link">Контакты</a>
+              <a href="#contacts" class="header__link">Контакты</a>
             </li>
           </ul>
+
         </nav>
-        <button class="header__btn btn">Резюме CV</button>
+         
+       
+        <a href="./files/Resume1.pdf" download class="header__btn btn">Резюме CV</a>
+        <div class="burger-menu">
+          <div class="burger-menu__line burger-menu__line_position_top"></div>
+          <div class="burger-menu__line burger-menu__line_position_middle"></div>
+          <div class="burger-menu__line burger-menu__line_position_bottom"></div>
+        </div>
       </div>
     </div>
   </header>
 
-  <main id="particles-js" class="main">
+  <main class="main">
+
     <div class="main__content">
-      <section class="intro">
+      <section class="intro" id="intro">
         <div class="container">
           <div class="intro__content">
             <div class="intro__desc">
               <p class="intro__subtitle">Привет меня зовут</p>
               <h1 class="intro__name">Rustoi</h1>
               <h3 class="intro__title">Я Front-end разработчик</h3>
-              <p class="intro__text">Lorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Error deserunt porro, placeat
-                dolorum explicabo dicta sequi ducimus sit autem blanditiis quos illum
-                tempora soluta suscipit perspiciatis labore optio velit odio.</p>
-
-              <a href="#" class="intro__btn btn">Связаться</a>
+              <p class="intro__text">Увлеченный созданием удобных и стильных веб-интерфейсов. 
+                Здесь вы найдете информацию обо мне и моих проектах.
+                Я стремлюсь создавать решения, которые делают жизнь проще и комфортнее. 
+                Всегда открыт для вопросов, идей и
+                сотрудничества!
+              </p>
+              <a href="#contact__form" class="intro__btn btn">Связаться</a>
               <ul class="intro__social">
-                <li class="animate__rollIn"><a href="#" class="intro__social-link"><i
+                <li class="animate__rollIn"><a href="https://www.instagram.com/rustoi200/profilecard/?igsh=MjBveHN1Y3JhZWZ0" target="_blank" class="intro__social-link"><i
                       class="fa-brands fa-instagram"></i></a></li>
-                <li class="animate__hinge"><a href="#" class="intro__social-link"><i
+                <li class="animate__hinge"><a href="https://t.me/RustoiU" target="_blank" class="intro__social-link"><i
                       class="fa-brands fa-telegram"></i></a></li>
-                <li class="animate__hinge"><a href="#" class="intro__social-link"><i
+                <li class="animate__hinge"><a href="https://www.facebook.com/rustoi.urazbaev/" target="_blank" class="intro__social-link"><i
                       class="fa-brands fa-facebook"></i></a></li>
-                <li class="animate__hinge"><a href="#" class="intro__social-link"><i
+                <li class="animate__hinge"><a href="https://github.com/Rustoi" target="_blank" class="intro__social-link"><i
                       class="fa-brands fa-github"></i></a></li>
               </ul>
             </div>
             <div class="info">
               <div class="info__content">
+               
                 <div class="info__image jump">
-                  <div class="jelly-animation"></div>
+                  <div class="jelly-animation">
+                  </div>
                   <img src="./img/man.png" alt="">
                 </div>
               </div>
@@ -84,20 +99,21 @@
           </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__content">
             <div class="about__image jump">
               <img src="./img/boy1.png" alt="">
+            
             </div>
             <div class="about__desc">
               <h2 class="about__title">Обо мне</h2>
-              <p class="about__text">Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Ut eaque totam, vel quos reprehenderit dolorem,
-                dolor in expedita alias consectetur asperiores error
-                molestias animi eos id saepe iste nobis accusamus.
-              </p>
+              <p class="about__text">Привет! Я начинающий фронтенд-разработчик, увлеченный изучением технологий и созданием современных веб-приложений. Люблю
+              разбираться в новых инструментах и постоянно учусь чему-то новому в мире IT.
+              В свободное время занимаюсь спортом: футбол, плавание, волейбол — это мои любимые активности. А ещё обожаю компьютерные
+              игры, которые вдохновляют меня на творчество и развитие в цифровой среде.
 
+              </p>
               <div class="about__info">
                 <label for=""> HTML </label>
                 <input value="90" type="range" name="range" min="0" max="100">
@@ -112,7 +128,7 @@
           </div>
 
       </section>
-      <section class="skills">
+      <section class="skills" id="skills">
         <div class="container">
           <h2 class="skills__title">Навыки</h2>
           <div class="skills__content">
@@ -198,31 +214,31 @@
 
 
             <!-- <div class="swiper">
-              <div class="swiper-wrapper">
-
-                <div class="swiper-slide">Slide 1
-                  <img src="./img/" alt="">
+                <div class="swiper-wrapper">
+  
+                  <div class="swiper-slide">Slide 1
+                    <img src="./img/" alt="">
+                  </div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  ...
                 </div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
-              </div>
-
-              <div class="swiper-pagination"></div>
-            
-
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            
-              <div class="swiper-scrollbar"></div>
-            </div> -->
+  
+                <div class="swiper-pagination"></div>
+              
+  
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <div class="swiper-scrollbar"></div>
+              </div> -->
           </div>
         </div>
 
 
       </section>
 
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <h2 class="portfolio__title">Портфолио</h2>
           <div class="portfolio__container">
@@ -245,9 +261,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Coffestyle</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/coffestyle" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/CoffeStyle/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
             <article class="portfolio__item">
@@ -257,9 +273,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Drafts</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML, CSS и JavaScript.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/drafts" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/drafts/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
             <article class="portfolio__item">
@@ -269,9 +285,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Pure</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/pure" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/pur/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
 
@@ -282,9 +298,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Travel</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/travel" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/Travel/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
             <article class="portfolio__item">
@@ -294,9 +310,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Nike</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/nike" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/Nike Project/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
             <article class="portfolio__item">
@@ -306,9 +322,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Spraw.uz</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/sprawuz" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/sprawuz/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
             <article class="portfolio__item">
@@ -318,9 +334,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Ioga</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/ioga" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/Ioga/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
             <article class="portfolio__item">
@@ -330,9 +346,9 @@
               <div class="portfolio__info">
                 <h3 class="portfolio__project-title">Stone</h3>
                 <p class="portfolio__description">Landing page. Используемые технологии: HTML и CSS.</p>
-                <a href="https://github.com/username/project2" target="_blank" class="portfolio__button">Посмотреть
+                <a href="https://github.com/Rustoi/Stone" target="_blank" class="portfolio__button">Посмотреть
                   код</a>
-                <a href="https://project2.com" target="_blank" class="portfolio__button">Демо</a>
+                <a href="./projects/Stone/index.html" target="_blank" class="portfolio__button">Демо</a>
               </div>
             </article>
             <!-- Добавьте другие проекты по аналогии -->
@@ -341,37 +357,73 @@
 
 
       </section>
-
-
       <section class="contacts" id="contacts">
         <h2 class="contacts__title">Свяжитесь со мной</h2>
         <div class="container">
           <div class="contacts__container">
-            <form class="contacts__form">
+            <form class="contacts__form" id="contact__form" method="post">
               <div class="contacts__form-group">
                 <label for="name" class="contacts__label">Имя</label>
-                <input type="text" id="name" class="contacts__input" placeholder="Ваше имя" required />
+                <input type="text" id="name" name="name" class="contacts__input" placeholder="Ваше имя" required />
               </div>
               <div class="contacts__form-group">
                 <label for="email" class="contacts__label">Email</label>
-                <input type="email" id="email" class="contacts__input" placeholder="Ваш email" required />
+                <input type="email" id="email" name="email" class="contacts__input" placeholder="Ваш email" required />
               </div>
               <div class="contacts__form-group">
                 <label for="message" class="contacts__label">Сообщение</label>
-                <textarea id="message" class="contacts__input contacts__textarea" placeholder="Ваше сообщение"
+                <textarea id="message" name="message" class="contacts__input contacts__textarea" placeholder="Ваше сообщение"
                   required></textarea>
               </div>
               <button type="submit" class="contacts__button">Отправить</button>
             </form>
+            <div class="contact__info">
+              <h2 class="contact__title">Контактная информация</h2>
 
-            <div class="contacts__socials">
-              <p class="contacts__text">Или найдите меня в социальных сетях:</p>
-            <ul class="intro__social">
-              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-telegram"></i></a></li>
-              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href="#" class="intro__social-link"><i class="fa-brands fa-github"></i></a></li>
-            </ul>
+              <div class="info__item">
+                <div class="info__icon">
+                  <a href="mailto:rustoi2015@yandex.ru" class="info-text"><i class="fa-regular fa-envelope"></i></a>
+
+                </div>
+                <div class="info__content">
+                  <div class="info__label">Email:</div>
+                  <a href="mailto:urustoi@gmail.com" class="info__text">urustoi@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="info__item">
+                <div class="info__icon">
+                  <a href="tel:+998998770464" class="info-text"><i class="fa-solid fa-phone"></i></a>
+                </div>
+                <div class="info__content">
+                  <div class="info__label">Телефон:</div>
+                  <a href="tel:+998998770464" class="info__text">+(998)99 877 04 64</a>
+                </div>
+              </div>
+
+              <div class="info__item">
+                <div class="info__icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="info__content">
+                  <div class="info__label">Адрес:</div>
+                  <div class="info__text">Чирчик, Узбекистан</div>
+                </div>
+              </div>
+
+              <div class="contacts__socials">
+                <p class="contacts__text">Или найдите меня в социальных сетях:</p>
+                <ul class="intro__social contacts__list">
+                  <li><a href="https://www.instagram.com/rustoi200/profilecard/?igsh=MjBveHN1Y3JhZWZ0" target="_blank"class="intro__social-link contacts__list-link"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="https://t.me/RustoiU" target="_blank" class="intro__social-link contacts__list-link"><i
+                        class="fa-brands fa-telegram"></i></a></li>
+                  <li><a href="https://www.facebook.com/rustoi.urazbaev/" target="_blank" class="intro__social-link contacts__list-link"><i
+                        class="fa-brands fa-facebook"></i></a></li>
+                  <li><a href="https://github.com/Rustoi" target="_blank"" class="intro__social-link contacts__list-link"><i class="fa-brands fa-github"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -380,10 +432,46 @@
 
     </div>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__content">
+          <div class="header__logo">
+            <a href="#intro">
+              <img src="./img/logo2.png" width="80px" height="80px" alt="Logo">
+            </a>
+          </div>
+  
+          <nav class="header__nav footer__nav">
+            <ul class="header__list footer__list">
+              <li class="header__item">
+                <a href="#intro" class="header__link">Главная</a>
+              </li>
+              <li class="header__item footer__item">
+                <a href="#about" class="header__link">Обо мне</a>
+              </li>
+              <li class="header__item footer__item">
+                <a href="#skills" class="header__link">Навыки</a>
+              </li>
+              <li class="header__item footer__item">
+                <a href="#portfolio" class="header__link">Портфолио</a>
+              </li>
+              <li class="header__item footer__item">
+                <a href="#contacts" class="header__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn footer__btn"><i class="fa-solid fa-arrow-up"></i> Вверх</button>
+        </div>
+      </div>
+      <div class="footer__copy">
+          <p class="footer__copy-text">&copy; 2024 Rustoi. Все права защищены.</p>
+      </div>
+    </div>
+    </div>
+  </footer>
 
-
-
-  <script src="./js/particles.min.js"></script>
+  <!-- <script src="./js/particles.min.js"></script> -->
 
   <script type="importmap">
       {
@@ -395,6 +483,7 @@
   </script>
   <script type="module" src="./js/three.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/confetti.js"></script>
   <script src="./index.js"></script>
 </body>
 

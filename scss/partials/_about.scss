@@ -78,23 +78,14 @@
 }
 
 .about__info label:nth-child(5):before{
-  background: url("/img/javascript.svg");
+  background: url("/img/javascript.svg") no-repeat center center/cover;
 }
 .about__info label:nth-child(3):before{
-  background: url("/img/css3.svg");
+  background: url("/img/css3.svg") no-repeat center center/cover;
 }
 .about__info label:nth-child(7):before{
   background: url("/img/react.svg") no-repeat center center/cover;
 }
-
-
-
-
-
-
-
-
-
 
 .about__title {
   font-family: $robotoBold;
@@ -109,7 +100,7 @@
 
 .about__text {
   font-family: $robotoRegular;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 23px;
   letter-spacing: 0em;
@@ -177,4 +168,110 @@
   color: $white;
 }
 
+@media screen and (max-width: 768px) {
+  .about__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__image {
+    width: 100%;
+    position: relative;
+    order: 2;
+  }
+  .about__image img {
+    object-fit: contain;
+    aspect-ratio: 16 / 10;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .about__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $white;
+    max-width: 600px;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10px;
+    order: 1;
+  }
 
+  .about__title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 32px;
+  }
+  .about__text {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .about__info input[type="range"] {
+    width: 90%;
+    // margin: 0 auto;
+  }
+  .about__info label {
+    font-size: 20px;
+  }
+
+  .about__info label::before {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .about__content {
+    grid-template-columns: 1fr;
+  }
+  .about__image {
+    width: 100%;
+    position: relative;
+  }
+  .about__image img {
+    object-fit: contain;
+    aspect-ratio: 16 / 10;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .about__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $white;
+    max-width: 600px;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .about__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .about__text {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
+  }
+  .about__info input[type="range"] {
+    width: 80%;
+    // margin: 0 auto;
+  }
+  .about__info label {
+    font-size: 16px;
+  }
+
+  .about__info label::before {
+    width: 50px;
+    height: 50px;
+  }
+}

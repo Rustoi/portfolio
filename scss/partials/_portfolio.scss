@@ -1,6 +1,6 @@
 /* Основные стили для блока портфолио */
 .portfolio {
-  padding: 60px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
@@ -13,27 +13,37 @@
 
 /* Контейнер для карточек */
 .portfolio__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
-  place-content: center;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 /* Карточка проекта */
 .portfolio__item {
-  background-color: #ffffffe7;
+  background-color: transparent;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.297);
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 360px;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  max-width: 370px;
+  width: 100%;
   text-align: left;
-  padding: 10px;
+  padding: 20px;
+  opacity: 0.9;
+}
+.portfolio__item:hover {
+  opacity: 1;
+  transform: scale(1.01);
 }
 /* Изображение проекта */
 .portfolio__image {
   width: 100%;
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 .portfolio__image img {
   width: 100%;
@@ -45,37 +55,37 @@
 
 }
 .portfolio__image img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* Информация о проекте */
 .portfolio__info {
   padding: 12px;
-  color: $black;
-	background: #efeeee;
+	background: $white;
   -webkit-box-shadow: -1px -9px 17px -5px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: -1px -9px 17px -5px rgba(34, 60, 80, 0.2);
   box-shadow: -1px -9px 17px -5px rgba(34, 60, 80, 0.2);
+  text-align: center;
       
 }
 
 .portfolio__project-title {
   font-size: 22px;
-  font-family: $robotoMedium;
+  font-family: $robotoBold;
   font-weight: 500;
   margin-bottom: 10px;
   text-align: center;
   color: $button;
+  text-transform: uppercase;
 }
 
 .portfolio__description {
   font-size: 16px;
-  font-family: $robotoRegular;
+  font-family: $robotoMedium;
   font-weight: 400;
   margin-bottom: 20px;
   line-height: 1.5;
-  color: $black;
-  
+  color: $black; 
 }
 
 /* Кнопки */
@@ -111,5 +121,17 @@
   .portfolio__item {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 368px) {
+  .portfolio {
+    padding: 0 10px;
+  }
+  .portfolio__title{
+    font-size: 38px;
+    padding: 0;
+    line-height: 50px;
   }
 }

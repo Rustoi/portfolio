@@ -1,0 +1,98 @@
+.footer {
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.228); 
+  padding-bottom: 20px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+  text-align: center;
+}
+.footer__copy {
+  text-align: center;
+  margin-top: 10px;
+}
+.footer__copy-text {
+  font-size: 18px;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer__btn {
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+  z-index: 999;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border:  1px solid $white;
+  background-color: $button;
+    text-transform: capitalize;
+}
+.footer__btn i{
+  font-size: 20px;
+  cursor: pointer;
+  animation: blink-and-scale 1.5s infinite;
+  transition: transform 0.3s;
+  margin-right: 10px;
+
+}
+
+@keyframes blink-and-scale {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+
+.footer__btn {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__copy {
+    margin-top: 0;
+  }
+  .footer__btn {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 999;
+    padding: 6px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    border:  1px solid $white;
+    background-color: $button;
+  
+  }
+  .footer__btn i{
+    font-size: 20px;
+    cursor: pointer;
+    animation: blink-and-scale 1.5s infinite;
+    transition: transform 0.3s;
+    margin-right: 10px;
+  }
+  
+}

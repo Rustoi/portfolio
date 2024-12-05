@@ -1,0 +1,83 @@
+.intro {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  &__social {
+   align-self: flex-end;
+    &-list li>i:hover {
+      cursor: pointer;
+      color: #ffc178;
+      transition: color .2s; 
+
+    } 
+   
+    &-title {
+      font-weight: 600;
+      line-height: 25px;
+      letter-spacing: 0px;
+      margin-bottom: 20px;
+      writing-mode: vertical-lr;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 3px;
+    }
+  }
+  &__content {
+    grid-column-start: 4;
+    grid-column-end: 12;
+  }
+  &__title {
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 6px;
+    color: $yellow;
+    margin-bottom: 32px;
+    position: relative;
+    text-transform: uppercase;
+    padding-left: 100px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 2px;
+      background: #ffc178;
+      position: absolute;
+      left:0;
+      top: 50%;
+    }
+  }
+  &__text {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 0em;
+  }
+  &__subtext {
+    font-size: 88px;
+    font-weight: 400;
+    line-height: 100px;
+    letter-spacing: 0em;
+    padding-bottom: 10px;
+  }
+}
+
+.intro__scroll {
+  text-align: center;
+  margin-top: 120px;
+
+ 
+  & a {
+    color: $white;
+    transition: color ease-out .2s;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0px;
+  }
+  & a:hover {
+    cursor: pointer;
+    color: #ffc178;
+  }
+}

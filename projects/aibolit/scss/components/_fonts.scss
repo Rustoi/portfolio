@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.woff2') format('woff2'),
+      url('/fonts/Roboto-Regular.woff') format('woff');
+  font-weight:400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('/fonts/Roboto-Bold.woff2') format('woff2'),
+      url('/fonts/Roboto-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: 'FuturaNewDemi-Regr';
+//   src: url('/fonts/FuturaNewDemi-Reg.woff2') format('woff2'),
+//       url('/fonts/FuturaNewDemi-Reg.woff') format('woff');
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'SchoolBookCyrillic';
+//   src: url('/fonts/SchoolBookCyrillic.woff2') format('woff2'),
+//       url('/fonts/SchoolBookCyrillic.woff') format('woff');
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'SchoolBookBoldCyrillic';
+//   src: url('/fonts/SchoolBookBoldCyrillic.woff2') format('woff2'),
+//       url('/fonts/SchoolBookBoldCyrillic.woff') format('woff');
+//   font-weight: 700;
+//   font-style: normal;
+//   font-display: swap;
+// }

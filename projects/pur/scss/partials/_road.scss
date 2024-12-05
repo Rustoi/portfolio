@@ -1,0 +1,47 @@
+.road {
+  &__inner {
+    display: flex;
+   justify-content: space-between;
+   gap: 210px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 632px;
+    justify-content: center;
+  }
+  &__subtitle {
+    max-width: 555px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0em;
+    margin: 27px 0;
+  }
+  &__descr {
+    line-height: 32px;
+    letter-spacing: 0px;
+    margin-bottom: 27px;
+  }
+  &__btn {
+     font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    color: #FFC178;
+    transition: color ease .2s;
+    &:hover {
+      color: rgb(199, 125, 29);
+    }
+
+  }
+  &__btn i {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+.road__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

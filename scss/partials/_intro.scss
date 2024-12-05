@@ -2,14 +2,15 @@
 .intro {
   position: relative;
   z-index: 99;
+  overflow: hidden;
 }
 
 .intro__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-content: center;
-  width: 100%;
-  height: 80vh;
+  grid-template-columns: 1fr minmax(400px, 1fr);
+  place-items: center;
+  z-index: 100;
+ 
 }
 
 .intro__title {
@@ -26,6 +27,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 }
 .intro__name {
   font-family: $robotoBold;
@@ -59,7 +61,7 @@
 
 .intro__text {
   font-family: $robotoRegular;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 23px;
   letter-spacing: 0em;
@@ -67,7 +69,7 @@
   color: $white;
   margin-top: 20px;
   margin-bottom: 30px;
-  
+  max-width: 400px;
 }
 
 
@@ -76,24 +78,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
-
-
-.info__image {
-  overflow: hidden;
-  padding: 20px;
- }
 .info__image img {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 5;
    transition: all ease 0.3s;
-   opacity: 0.8;
-   transform: scale(0.8);
-  
-
+   opacity: 0.9;
+   transform: scale(0.88);
   &:hover {
     transform: scale(0.9);
     opacity: 1;
@@ -124,6 +119,182 @@
     border-radius: 50%;
   }
 }
+@media screen and (max-width: 1130px) {
+  .intro__title {
+    font-size: 60px;
+  }
+  .intro__text {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+
+  .intro__title {
+    font-size: 90px;
+    padding: 20px 0 0 0;
+    text-align: center;
+    max-width: 800px;
+    line-height:inherit;
+    letter-spacing: 4px;
+  }
+  .intro__text {
+    max-width: 600px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .intro__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+
+
+@media screen and (max-width: 766px) {
+
+  .intro__title {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .intro__text {
+    // max-width: 500px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .intro__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .info__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
+@media  screen and (max-width: 599px) {
+
+  .jelly-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .jelly-animation canvas {
+    width: 80% !important;
+    height: 80% !important;
+  }
+  .info__image img {
+    opacity: 0.7;
+  }
+  .info__image img:hover {
+    opacity: 1;
+  }
+}
+
+
+@media  screen and (max-width: 544px) {
+
+  .jelly-animation {
+    display: none;
+  }
+  .info__image img {
+    opacity: 1;
+  }
+  .info__image img:hover {
+    opacity: 0.8;
+  }
+}
+
+
+@media  screen and (max-width: 468px) {
+  .container {
+   padding: 0;
+  }
+  .intro__name {
+    font-size: 40px;
+  }
+
+  .intro__title{
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+  .intro__text {
+    font-size: 15px;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+
+@media  screen and (max-width: 386px) {
+  .intro__name {
+    font-size: 26px;
+  }
+
+  .intro__title{
+    font-size: 46px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .intro__text {
+    font-size: 15px;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 368px) {
+    .intro__name {
+    font-size: 26px;
+  }
+
+  .intro__title{
+    font-size: 38px;
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 50px;
+
+  }
+  .intro__text {
+    font-size: 15px;
+    padding: 0 10px;
+    text-align: center;
+    
+  }
+}
+
+
+
+
+
+
 
 
 

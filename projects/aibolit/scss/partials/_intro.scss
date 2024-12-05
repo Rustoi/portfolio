@@ -1,0 +1,79 @@
+
+.main {
+  margin-top: 95px;
+  position: relative;
+  z-index: 10;
+}
+.intro {
+  background: url(/img/intro-bg.jpg) no-repeat center center/cover;
+  height: 810px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $title;
+  }
+  &__title {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0em;
+    margin-top: 50px;
+  }
+  &__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 1px;
+    margin: 14px 0 22px 0;
+  }
+  &__btn {
+    margin-right: 12px;
+  }
+  &__btn:last-child {
+    margin-right: 0;
+  }
+}
+.intro__bottom {
+  background: $title;
+}
+.intro__logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.intro__logo-item {
+  padding: 19px 0 17px 0;
+}
+
+@media (max-width:468px){
+  .main {
+    margin-top: 100px;
+  }
+  .intro__btn {
+    font-size: 12px;
+    margin-right: 8px;
+    padding: 5px 22px;
+  }
+  .intro__title {
+    font-size: 30px;
+  }
+  .intro__logo {
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  .intro__logo-item {
+    padding: 0;
+  }
+}
+@media (max-width:320px){
+  .intro__button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+}

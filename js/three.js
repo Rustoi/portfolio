@@ -16,21 +16,21 @@ renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
 
 // Создаем свет
-const light = new THREE.DirectionalLight(0xffffff, 10);
-light.position.set(-20, 44, 40);
+const light = new THREE.DirectionalLight(0xffffff, 5);
+light.position.set(10, 10, 30);
 scene.add(light);
 
 // Создаем материал с оранжевым цветом и желеобразной прозрачностью
 const jellyMaterial = new THREE.MeshStandardMaterial({
-  color: 0x000000, // Оранжевый цвет
-  roughness: 0.5,
-  metalness: 0.5,
+  color: 0x000000, 
+  roughness: 0.4,
+  metalness: 0.1,
   transparent: true,
   opacity: 1,
 });
 
 // Создаем геометрию сферы
-const geometry = new THREE.SphereGeometry(2.9, 42, 42); // Увеличиваем количество сегментов для плавных деформаций
+const geometry = new THREE.SphereGeometry(2.8, 40, 40); // Увеличиваем количество сегментов для плавных деформаций
 const jelly = new THREE.Mesh(geometry, jellyMaterial);
 scene.add(jelly);
 
@@ -41,7 +41,7 @@ camera.position.z = 5;
 const initialPositions = geometry.attributes.position.array.slice();
 
 // Параметры анимации
-let time = 0;
+let time = 1;
 
 // Функция для создания эффекта "желе"
 function animateJelly() {
@@ -50,7 +50,7 @@ function animateJelly() {
     // Расчет на основе синусоидальной волны для движения по оси Y
     positions[i + 1] =
       initialPositions[i + 1] +
-      Math.sin(time + positions[i] * 2 + positions[i + 2] * 3) * 0.1;
+      Math.sin(time + positions[i] * 2 + positions[i + 2] * 2) * 0.1;
   }
   geometry.attributes.position.needsUpdate = true;
 }
@@ -60,7 +60,7 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Колебания "желе"
-  time += 0.05;
+  time += 0.06;
   animateJelly();
 
   renderer.render(scene, camera);
@@ -68,11 +68,29 @@ function animate() {
 
 animate(); // Запускаем анимацию
 
-// Обновление размеров окна и контейнера
-window.addEventListener("resize", () => {
-  const width = container.clientWidth;
-  const height = container.clientHeight;
-  renderer.setSize(width, height);
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-});
+// Функция для обновления геометрии
+// window.addEventListener("resize", () => {
+//   const width = container.clientWidth;
+//   const height = container.clientHeight;
+//   renderer.setSize(width, height);
+//   camera.aspect = width / height;
+//   camera.updateProjectionMatrix();
+//   // Проверка ширины экрана и обновление геометрии
+//   if (width < 768) {
+//     updateGeometry(1); // Уменьшенный радиус для маленьких экранов
+//     camera.position.z = 6;
+//   } else {
+//     updateGeometry(2.8); // Оригинальный радиус для больших экранов
+//     camera.position.z = 5;
+//   }
+// });
+
+// // Функция для обновления геометрии
+// function updateGeometry(newRadius) {
+//   jelly.geometry.dispose(); // Освобождаем старую геометрию
+//   geometry = new THREE.SphereGeometry(newRadius, 40, 40); // Создаем новую геометрию
+//   jelly.geometry = geometry;
+//   // Сохраняем начальные позиции для новой геометрии
+//   initialPositions = geometry.attributes.position.array.slice();
+// }
+

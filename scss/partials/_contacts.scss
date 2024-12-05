@@ -13,18 +13,18 @@
 
 .contacts__container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 
 .contacts__form {
   width: 100%;
-  max-width: 500px;
-  background-color: #fff;
+  max-width: 400px;
+  background-color: transparent;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(243, 242, 242, 0.139);
+  box-shadow: 0 4px 15px rgba(243, 242, 242, 0.508);
 }
 
 .contacts__form-group {
@@ -36,7 +36,7 @@
   display: block;
   font-size: 1rem;
   margin-bottom: 5px;
-  color: #555;
+  color: $white;
 }
 
 .contacts__input, .contacts__textarea {
@@ -90,6 +90,143 @@
   .contacts__container {
     flex-direction: column;
   }
+  .contacts__title {
+    font-size: 36px;
+  }
 }
+
+
+// Contacts section
+
+ .contact__info {
+     width: 100%;
+      max-width: 400px;
+      background-color: transparent;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(243, 242, 242, 0.438);
+    }
+    .contact__title {
+      margin-bottom: 16px;
+      color: $white;
+      font-size: 20px;
+    }
+    .contacts__list {
+     justify-content: center;
+    }
+    .contacts__list-link i {
+      background-color: $button;
+    }
+      .contacts__list-link i:hover {
+      color: #000000;
+    }
+
+    .info__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: $button;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      color: $white;
+    }
+
+    .info__item:hover {
+      transform: translateX(6px);
+    }
+
+    .info__icon {
+      width: 40px;
+      height: 40px;
+      background-color: #e3f2fd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      color: $button;
+      transition: all 0.3s ease;
+    }
+      .info__icon:hover {
+        transform: scale(1.2);
+      }
+        .info__icon i {
+          font-size: 22px;
+        }
+
+    .info__content {
+      flex-grow: 1;
+    }
+
+    .info__label {
+      font-weight: 400;
+      color: $white;
+      margin-bottom: 4px;
+    }
+
+    .info__text {
+      color: $white;
+    }
+      .info-text i{
+      color: $button;
+      font-size: 22px;
+    }
+
+    /* Стили для социальных сетей */
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      width: 45px;
+      height: 45px;
+      background-color: #f8f9fa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background-color: #e3f2fd;
+      transform: translateY(-3px);
+    }
+
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Анимации */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .contact-form {
+      animation: fadeIn 0.6s ease-out 0.2s forwards;
+    }
+
+    .contact-info {
+      animation: fadeIn 0.6s ease-out 0.4s forwards;
+    }
+  
+@media screen and (max-width: 368px) {
+  .contacts__title{
+    font-size: 38px;
+  }
+}
+
 
 

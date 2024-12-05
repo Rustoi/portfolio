@@ -1,12 +1,14 @@
 .skills{
   padding-top: 60px;
   padding-bottom: 60px;
+
 }
 .skills__content{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .skills__title{
@@ -18,6 +20,8 @@
 }
 .skills__desc{
   padding-bottom: 30px;
+ font-family: $robotoRegular;
+ margin: 0 auto;
 }
 .skills__text {
   font-family: $robotoRegular;
@@ -33,4 +37,18 @@
   color: $button;
   font-size: 26px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 368px) {
+
+  .skills {
+    padding: 20px 0;
+  }
+  .skills__title{
+    font-size: 38px;
+    margin-bottom: 0;
+    padding: 0;
+    line-height: 50px;
+  }
+  
 }

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boosted</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <p class="header__top-text">Financing option available at checkout.</p>
+    </div>
+    <div class="header__content">
+      <div class="header__logo">
+        <a href="#intro">
+          <svg width="160" height="36" viewBox="0 0 160 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M0 0H160V36H0V0Z" fill="url(#pattern0)" />
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_1_1661" transform="translate(0 -0.00505051) scale(0.00181818 0.00808081)" />
+              </pattern>
+              <image id="image0_1_1661" width="550" height="125"
+                xlink:href="data:image/png;base64,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" />
+            </defs>
+          </svg>
+        </a>
+
+      </div>
+      <nav class="header__nav">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="nav__list">
+          <li class="nav__list-item"><a href="#perfomans" class="nav__link">Electric Skateboards</a></li>
+          <li class="nav__list-item"><a href="#boosted" class="nav__link">Electric Scooters</a></li>
+          <li class="nav__list-item"><a href="#accessories" class="nav__link">Accessories</a></li>
+          <li class="nav__list-item"><a href="#info" class="nav__link">Gift Card</a></li>
+          <li class="nav__list-item"><a href="#footer" class="nav__link">More Info</a></li>
+        </ul>
+      </nav>
+      <div class="header__icon">
+        <a class="header__icon-link" href="#"><i class="fa-solid fa-circle-user"></i></a>
+        <a class="header__icon-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="intro" id="intro">
+      <div class="container">
+        <div class="intro__content">
+          <h1 class="intro__title">Welcome to Boosted USA</h1>
+          <p class="intro__text">The Holy Grail of Electric Skateboards and One REVolutionary Scooter</p>
+          <div class="intro__button">
+            <a class="intro__btn btn" href="#">Boosted Revs</a>
+            <a class="intro__btn btn" href="#">Boosted Boards</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="intro__bottom">
+      <div class="container">
+        <ul class="intro__logo">
+          <li class="intro__logo-item"><img src="./img/intro-1.png" alt=""></li>
+          <li class="intro__logo-item"><img src="./img/intro-2.png" alt=""></li>
+          <li class="intro__logo-item"><img src="./img/intro-3.png" alt=""></li>
+          <li class="intro__logo-item"><img src="./img/intro-4.png" alt=""></li>
+        </ul>
+      </div>
+    </div>
+    <section class="products">
+      <div class="container">
+        <div class="products__content">
+          <div class="products__descr">
+            <h2 class="products__title">
+              Looking for Boosted Boards, or Boosted Revs?
+            </h2>
+            <p class="products__text">
+              Boosted USA acquired all of the remaining inventory directly from Boosted. This means we have the electric
+              skateboards and scooter you all love and have been looking for. Get your hands on these highly sought
+              after products while supplies last.
+            </p>
+          </div>
+          <div class="products__shop">
+            <div class="products__shop-item">
+              <h3 class="products__shop-title">
+                Shop Boosted Boards
+              </h3>
+              <p class="products__shop-text">
+                In Stock
+              </p>
+            </div>
+            <div class="products__shop-item">
+              <h3 class="products__shop-title">
+                Shop Boosted Revs
+              </h3>
+              <p class="products__shop-text">
+                In Stock
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="perfomance" id="perfomans">
+      <div class="container">
+        <div class="perfomance__content">
+          <h3 class="perfomance__title">
+            High-performance
+          </h3>
+          <h4 class="perfomance__subtitle">
+            Electric Skateboards
+          </h4>
+          <p class="perfomance__text">
+            Cruising campus, going to work or getting through that long list of errands has never been easier or more
+            fun.
+          </p>
+          <a class="btn perfomance__btn" href="#">Shop Now</a>
+        </div>
+      </div>
+    </section>
+    <section class="boosted" id="boosted">
+      <div class="container">
+        <div class="boosted__content">
+          <img src="./img/boosted-1.jpg" alt="Girl on electric scooter">
+          <img src="./img/boosted-2.jpg" alt="Electric scooter">
+          <div class="boosted__descr">
+            <h3 class="boosted__title">
+              Boosted Rev
+            </h3>
+            <p class="boosted__text">
+              There's never been an electric scooter quite like this. Speed past traffic at 24 mph. Go up to 22 miles on
+              a single charge. You'll get there in no time at all. Stop and go with the roll of your thumb. Its
+              intuitive design means there’s almost no learning curve.
+            </p>
+            <a class="btn boosted__btn" href="#!">Shop Now</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="shop">
+      <div class="wrapper">
+        <div class="shop__content">
+          <div class="shop__content-item">
+            <h3 class="shop__title">
+              Shop Boosted Stealth
+            </h3>
+            <h4 class="shop__subtitle">
+              In Stock
+            </h4>
+          </div>
+          <div class="shop__content-item">
+            <h3 class="shop__title">
+              Shop Boosted Plus
+            </h3>
+            <h4 class="shop__subtitle">
+              In Stock
+            </h4>
+          </div>
+          <div class="shop__content-item">
+            <h3 class="shop__title">
+              Shop Boosted Mini
+            </h3>
+            <h4 class="shop__subtitle">
+              In Stock
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video">
+        <div class="container">
+          <div class="video__content">
+            <div class="video__content-item">
+              <iframe width="540" height="304" 
+                src="https://www.youtube.com/embed/78bXV1ZqQWI"
+                lazy
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+             
+            </div>
+            <div class="video__content-item">
+              <iframe width="540" height="304"
+              src="https://www.youtube.com/embed/oAQxk9dOJ8k"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="accessories" id="accessories">
+      <h3 class="accessories__title">
+        Looking for Accessories?
+      </h3>
+      <div class="accessories__content">
+        <div class="accessories__content-item">
+          <img src="./img/accesories-1.png" alt="accesories">
+          <p class="accessories__descr">
+            Rev Tube
+          </p>
+          <p class="accessories__price">
+            $16.00
+            <span class="accessories__discount">$19.00</span>
+          </p>
+        </div>
+        <div class="accessories__content-item">
+          <img src="./img/accesories-2.png" alt="accesories">
+          <p class="accessories__descr">
+            Boosted Rev Stem Catch
+          </p>
+          <p class="accessories__price">
+            $19.00
+            <span class="accessories__discount">$29.00</span>
+          </p>
+        </div>
+        <div class="accessories__content-item">
+          <img src="./img/accesories-3.png" alt="accesories">
+          <p class="accessories__descr">
+            Stomp Brake Fender
+          </p>
+          <p class="accessories__price">
+            Sold Out
+          </p>
+        </div>
+        <div class="accessories__content-item">
+          <img src="./img/accesories-4.png" alt="accesories">
+          <p class="accessories__descr">
+            Boosted Belt Kit
+          </p>
+          <p class="accessories__price">
+            $25.00
+          </p>
+        </div>
+        <div class="accessories__content-item">
+          <img src="./img/accesories-5.png" alt="accesories">
+          <p class="accessories__descr">
+            Bearing Service Kit
+          </p>
+          <p class="accessories__price">
+            $50.00
+          </p>
+        </div>
+        <div class="accessories__content-item">
+          <img src="./img/accesories-6.png" alt="accesories">
+          <p class="accessories__descr">
+            Boosted Pulley / Belt Upgrade Kit
+          </p>
+          <p class="accessories__price">
+            $75.00
+          </p>
+        </div>
+        <div class="accessories__content-item">
+          <img src="./img/accesories-7.png" alt="accesories">
+          <p class="accessories__descr">
+            Boosted Skid Plates
+          </p>
+          <p class="accessories__price">
+            $20.00
+          </p>
+        </div>
+      </div>
+      <div class="accessories__decor">
+
+      </div>
+    </section>
+    <section class="info" id="info">
+      <div class="info__content">
+        <div class="info__content-item">
+          <img class="info__icon" src="./img/info-1.svg" alt="">
+          <h4 class="info__title">
+            Go Fast
+          </h4>
+          <p class="info__text">
+            Boosted is known for its premium performance boards offering a next-level experience.
+          </p>
+        </div>
+        <div class="info__content-item">
+          <img class="info__icon" src="./img/info-2.svg" alt="">
+          <h4 class="info__title">
+            Go Far
+          </h4>
+          <p class="info__text text">
+            With optional extended battery life, you can get wherever you need to go reliably.
+          </p>
+        </div>
+        <div class="info__content-item">
+          <img class="info__icon" src="./img/info-3.svg" alt="">
+          <h4 class="info__title">
+            Go Safe
+          </h4>
+          <p class="info__text">
+            Safety is a #1 priority for Boosted, always wear a helmet when riding.
+          </p>
+        </div>
+        <div class="info__content-item">
+          <img class="info__icon" src="./img/info-4.svg" alt="">
+          <h4 class="info__title">
+            Built to Last!
+          </h4>
+          <p class="info__text">
+            Boosted products are engineered to last for years and are extremely reliable.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__logo">
+          <a href="#intro"><img src="./img/footer-logo.svg" alt="Logo"></a>
+        </div>
+        <div class="footer__blocks">
+          <h5 class="footer__title">
+            Explore
+          </h5>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__list-item"><a class="footer__link" href="#">Electric Skateboards</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">Electric Scooters</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">Accessories</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">FAQs</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">Warranty</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">Quick Start Guide</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">Contact</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">Gift Card</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#">Accessibility Statement</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__info">
+          <h5 class="footer__info-title">
+            About Boosted USA
+          </h5>
+          <p class="footer__info-text">
+            Boosted empowers people everywhere to commute across their cities, campuses, and communities in ways that
+            were never before possible. Boosted is solving one of the biggest problems people face each day:
+            transportation.
+          </p>
+          <address>
+            CaliRides LLC - DBA Boosted USA
+            1281 Andersen Drive Ste. K
+            San Rafael, CA 94901
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bootom">
+      <div class="container">
+        <div class="footer__bootom-inner">
+          <div class="footer__bottom-info">
+            © 2021
+            <span>Boosted USA.</span>
+            All Rights Reserved.
+            <span>Terms of Service</span>
+            . Built by
+            <span>BH</span>
+          </div>
+          <div class="footer__payment">
+            <ul class="payment__list">
+              <li class="payment__icon"><img src="./img/payment-icon-1.svg" alt="Amex payment"></li>
+              <li class="payment__icon"><img src="./img/payment-icon-2.svg" alt="Diners Club Card"></li>
+              <li class="payment__icon"><img src="./img/payment-icon-3.svg" alt="Google pay payment"></li>
+              <li class="payment__icon"><img src="./img/payment-icon-4.svg" alt="Klarna payment"></li>
+              <li class="payment__icon"><img src="./img/payment-icon-5.svg" alt="Mastercard payment"></li>
+              <li class="payment__icon"><img src="./img/payment-icon-6.svg" alt="OPay payment"></li>
+              <li class="payment__icon"><img src="./img/payment-icon-7.svg" alt="V payment"></li>
+              <li class="payment__icon"><img src="./img/payment-icon-8.svg" alt="Visa payment"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

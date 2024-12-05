@@ -1,0 +1,62 @@
+.bromo {
+  margin-bottom: 220px;
+  &__inner {
+    background: url(/img/content_img.png) no-repeat center center/cover;
+    min-height: 985px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  &__title {
+    padding-left: 0;
+    position: relative;
+    color: #FBD784;
+    &::after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 2px;
+      background: #ffc178;
+      position: absolute;
+      right: -100px;
+      top: 50%;
+    }
+    &::before {
+      left: -100px;
+    }
+  }
+  &__subtitle {
+    max-width: 780px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0em;
+    margin: 27px 0;
+  }
+  &__text {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0px; 
+    margin-bottom: 38px;
+    max-width: 920px;
+  }
+  &__btn a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    color: $yellow;
+    transition: color ease .2s;
+    &:hover {
+      color: rgb(199, 125, 29);
+      }
+  }
+  &__btn i {
+    display: inline-block;
+    margin-left: 10px;
+  }
+ 
+} 

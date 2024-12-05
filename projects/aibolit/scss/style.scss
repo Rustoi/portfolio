@@ -1,0 +1,23 @@
+//Settings
+@import "components/fonts";
+@import "components/reset";
+@import "variables/variables";
+@import "variables/color";
+@import "components/global";
+@import "components/components";
+@import "components/mixins";
+// ------------------------------
+
+
+
+// Partials
+@import "partials/header";
+@import "partials/intro";
+@import "partials/products";
+@import "partials/performance";
+@import "partials/boosted";
+@import "partials/shop";
+@import "partials/accessories";
+@import "partials/info";
+@import "partials/footer";
+
